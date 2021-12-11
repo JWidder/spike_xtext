@@ -1,0 +1,9 @@
+grammar de.raytracer.rtdsl.RayTracerModel with org.eclipse.xtext.common.Terminals
+
+generate rayTracerModel "http://www.raytracer.de/rtdsl/RayTracerModel"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
