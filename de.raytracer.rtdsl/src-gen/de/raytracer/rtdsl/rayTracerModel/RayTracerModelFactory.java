@@ -33,13 +33,31 @@ public interface RayTracerModelFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Greeting</em>'.
+   * Returns a new object of class '<em>Box</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Greeting</em>'.
+   * @return a new object of class '<em>Box</em>'.
    * @generated
    */
-  Greeting createGreeting();
+  Box createBox();
+
+  /**
+   * Returns a new object of class '<em>Sphere</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sphere</em>'.
+   * @generated
+   */
+  Sphere createSphere();
+
+  /**
+   * Returns a new object of class '<em>Camera</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Camera</em>'.
+   * @generated
+   */
+  Camera createCamera();
 
   /**
    * Returns the package supported by this factory.

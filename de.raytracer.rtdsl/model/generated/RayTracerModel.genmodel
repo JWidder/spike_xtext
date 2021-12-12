@@ -7,10 +7,17 @@
   <genPackages prefix="RayTracerModel" basePackage="de.raytracer.rtdsl" disposableProviderFactory="true"
       fileExtensions="rt_model" ecorePackage="RayTracerModel.ecore#/">
     <genClasses ecoreClass="RayTracerModel.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RayTracerModel.ecore#//Model/greetings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RayTracerModel.ecore#//Model/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RayTracerModel.ecore#//Model/element"/>
     </genClasses>
-    <genClasses ecoreClass="RayTracerModel.ecore#//Greeting">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RayTracerModel.ecore#//Greeting/name"/>
+    <genClasses ecoreClass="RayTracerModel.ecore#//Box">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RayTracerModel.ecore#//Box/name"/>
+    </genClasses>
+    <genClasses ecoreClass="RayTracerModel.ecore#//Sphere">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RayTracerModel.ecore#//Sphere/name"/>
+    </genClasses>
+    <genClasses ecoreClass="RayTracerModel.ecore#//Camera">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RayTracerModel.ecore#//Camera/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

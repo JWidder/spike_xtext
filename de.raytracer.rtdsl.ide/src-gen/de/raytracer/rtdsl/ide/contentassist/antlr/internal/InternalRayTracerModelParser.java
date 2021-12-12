@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalRayTracerModelParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'model'", "'box'", "'sphere'", "'camera'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
@@ -33,6 +33,8 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
     public static final int T__11=11;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
     public static final int EOF=-1;
 
     // delegates
@@ -101,49 +103,31 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
 
 
     // $ANTLR start "ruleModel"
-    // InternalRayTracerModel.g:62:1: ruleModel : ( ( rule__Model__GreetingsAssignment )* ) ;
+    // InternalRayTracerModel.g:62:1: ruleModel : ( ( rule__Model__Group__0 ) ) ;
     public final void ruleModel() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRayTracerModel.g:66:2: ( ( ( rule__Model__GreetingsAssignment )* ) )
-            // InternalRayTracerModel.g:67:2: ( ( rule__Model__GreetingsAssignment )* )
+            // InternalRayTracerModel.g:66:2: ( ( ( rule__Model__Group__0 ) ) )
+            // InternalRayTracerModel.g:67:2: ( ( rule__Model__Group__0 ) )
             {
-            // InternalRayTracerModel.g:67:2: ( ( rule__Model__GreetingsAssignment )* )
-            // InternalRayTracerModel.g:68:3: ( rule__Model__GreetingsAssignment )*
+            // InternalRayTracerModel.g:67:2: ( ( rule__Model__Group__0 ) )
+            // InternalRayTracerModel.g:68:3: ( rule__Model__Group__0 )
             {
-             before(grammarAccess.getModelAccess().getGreetingsAssignment()); 
-            // InternalRayTracerModel.g:69:3: ( rule__Model__GreetingsAssignment )*
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+             before(grammarAccess.getModelAccess().getGroup()); 
+            // InternalRayTracerModel.g:69:3: ( rule__Model__Group__0 )
+            // InternalRayTracerModel.g:69:4: rule__Model__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Model__Group__0();
 
-                if ( (LA1_0==11) ) {
-                    alt1=1;
-                }
+            state._fsp--;
 
 
-                switch (alt1) {
-            	case 1 :
-            	    // InternalRayTracerModel.g:69:4: rule__Model__GreetingsAssignment
-            	    {
-            	    pushFollow(FOLLOW_3);
-            	    rule__Model__GreetingsAssignment();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop1;
-                }
-            } while (true);
-
-             after(grammarAccess.getModelAccess().getGreetingsAssignment()); 
+             after(grammarAccess.getModelAccess().getGroup()); 
 
             }
 
@@ -165,20 +149,20 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
     // $ANTLR end "ruleModel"
 
 
-    // $ANTLR start "entryRuleGreeting"
-    // InternalRayTracerModel.g:78:1: entryRuleGreeting : ruleGreeting EOF ;
-    public final void entryRuleGreeting() throws RecognitionException {
+    // $ANTLR start "entryRuleBox"
+    // InternalRayTracerModel.g:78:1: entryRuleBox : ruleBox EOF ;
+    public final void entryRuleBox() throws RecognitionException {
         try {
-            // InternalRayTracerModel.g:79:1: ( ruleGreeting EOF )
-            // InternalRayTracerModel.g:80:1: ruleGreeting EOF
+            // InternalRayTracerModel.g:79:1: ( ruleBox EOF )
+            // InternalRayTracerModel.g:80:1: ruleBox EOF
             {
-             before(grammarAccess.getGreetingRule()); 
+             before(grammarAccess.getBoxRule()); 
             pushFollow(FOLLOW_1);
-            ruleGreeting();
+            ruleBox();
 
             state._fsp--;
 
-             after(grammarAccess.getGreetingRule()); 
+             after(grammarAccess.getBoxRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -192,35 +176,35 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "entryRuleGreeting"
+    // $ANTLR end "entryRuleBox"
 
 
-    // $ANTLR start "ruleGreeting"
-    // InternalRayTracerModel.g:87:1: ruleGreeting : ( ( rule__Greeting__Group__0 ) ) ;
-    public final void ruleGreeting() throws RecognitionException {
+    // $ANTLR start "ruleBox"
+    // InternalRayTracerModel.g:87:1: ruleBox : ( ( rule__Box__Group__0 ) ) ;
+    public final void ruleBox() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRayTracerModel.g:91:2: ( ( ( rule__Greeting__Group__0 ) ) )
-            // InternalRayTracerModel.g:92:2: ( ( rule__Greeting__Group__0 ) )
+            // InternalRayTracerModel.g:91:2: ( ( ( rule__Box__Group__0 ) ) )
+            // InternalRayTracerModel.g:92:2: ( ( rule__Box__Group__0 ) )
             {
-            // InternalRayTracerModel.g:92:2: ( ( rule__Greeting__Group__0 ) )
-            // InternalRayTracerModel.g:93:3: ( rule__Greeting__Group__0 )
+            // InternalRayTracerModel.g:92:2: ( ( rule__Box__Group__0 ) )
+            // InternalRayTracerModel.g:93:3: ( rule__Box__Group__0 )
             {
-             before(grammarAccess.getGreetingAccess().getGroup()); 
-            // InternalRayTracerModel.g:94:3: ( rule__Greeting__Group__0 )
-            // InternalRayTracerModel.g:94:4: rule__Greeting__Group__0
+             before(grammarAccess.getBoxAccess().getGroup()); 
+            // InternalRayTracerModel.g:94:3: ( rule__Box__Group__0 )
+            // InternalRayTracerModel.g:94:4: rule__Box__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group__0();
+            rule__Box__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getGreetingAccess().getGroup()); 
+             after(grammarAccess.getBoxAccess().getGroup()); 
 
             }
 
@@ -239,26 +223,362 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "ruleGreeting"
+    // $ANTLR end "ruleBox"
 
 
-    // $ANTLR start "rule__Greeting__Group__0"
-    // InternalRayTracerModel.g:102:1: rule__Greeting__Group__0 : rule__Greeting__Group__0__Impl rule__Greeting__Group__1 ;
-    public final void rule__Greeting__Group__0() throws RecognitionException {
+    // $ANTLR start "entryRuleSphere"
+    // InternalRayTracerModel.g:103:1: entryRuleSphere : ruleSphere EOF ;
+    public final void entryRuleSphere() throws RecognitionException {
+        try {
+            // InternalRayTracerModel.g:104:1: ( ruleSphere EOF )
+            // InternalRayTracerModel.g:105:1: ruleSphere EOF
+            {
+             before(grammarAccess.getSphereRule()); 
+            pushFollow(FOLLOW_1);
+            ruleSphere();
+
+            state._fsp--;
+
+             after(grammarAccess.getSphereRule()); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleSphere"
+
+
+    // $ANTLR start "ruleSphere"
+    // InternalRayTracerModel.g:112:1: ruleSphere : ( ( rule__Sphere__Group__0 ) ) ;
+    public final void ruleSphere() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRayTracerModel.g:106:1: ( rule__Greeting__Group__0__Impl rule__Greeting__Group__1 )
-            // InternalRayTracerModel.g:107:2: rule__Greeting__Group__0__Impl rule__Greeting__Group__1
+            // InternalRayTracerModel.g:116:2: ( ( ( rule__Sphere__Group__0 ) ) )
+            // InternalRayTracerModel.g:117:2: ( ( rule__Sphere__Group__0 ) )
+            {
+            // InternalRayTracerModel.g:117:2: ( ( rule__Sphere__Group__0 ) )
+            // InternalRayTracerModel.g:118:3: ( rule__Sphere__Group__0 )
+            {
+             before(grammarAccess.getSphereAccess().getGroup()); 
+            // InternalRayTracerModel.g:119:3: ( rule__Sphere__Group__0 )
+            // InternalRayTracerModel.g:119:4: rule__Sphere__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Sphere__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSphereAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleSphere"
+
+
+    // $ANTLR start "entryRuleCamera"
+    // InternalRayTracerModel.g:128:1: entryRuleCamera : ruleCamera EOF ;
+    public final void entryRuleCamera() throws RecognitionException {
+        try {
+            // InternalRayTracerModel.g:129:1: ( ruleCamera EOF )
+            // InternalRayTracerModel.g:130:1: ruleCamera EOF
+            {
+             before(grammarAccess.getCameraRule()); 
+            pushFollow(FOLLOW_1);
+            ruleCamera();
+
+            state._fsp--;
+
+             after(grammarAccess.getCameraRule()); 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleCamera"
+
+
+    // $ANTLR start "ruleCamera"
+    // InternalRayTracerModel.g:137:1: ruleCamera : ( ( rule__Camera__Group__0 ) ) ;
+    public final void ruleCamera() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:141:2: ( ( ( rule__Camera__Group__0 ) ) )
+            // InternalRayTracerModel.g:142:2: ( ( rule__Camera__Group__0 ) )
+            {
+            // InternalRayTracerModel.g:142:2: ( ( rule__Camera__Group__0 ) )
+            // InternalRayTracerModel.g:143:3: ( rule__Camera__Group__0 )
+            {
+             before(grammarAccess.getCameraAccess().getGroup()); 
+            // InternalRayTracerModel.g:144:3: ( rule__Camera__Group__0 )
+            // InternalRayTracerModel.g:144:4: rule__Camera__Group__0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Camera__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getCameraAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleCamera"
+
+
+    // $ANTLR start "rule__Model__ElementAlternatives_2_0"
+    // InternalRayTracerModel.g:152:1: rule__Model__ElementAlternatives_2_0 : ( ( ruleBox ) | ( ruleSphere ) | ( ruleCamera ) );
+    public final void rule__Model__ElementAlternatives_2_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:156:1: ( ( ruleBox ) | ( ruleSphere ) | ( ruleCamera ) )
+            int alt1=3;
+            switch ( input.LA(1) ) {
+            case 12:
+                {
+                alt1=1;
+                }
+                break;
+            case 13:
+                {
+                alt1=2;
+                }
+                break;
+            case 14:
+                {
+                alt1=3;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 1, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt1) {
+                case 1 :
+                    // InternalRayTracerModel.g:157:2: ( ruleBox )
+                    {
+                    // InternalRayTracerModel.g:157:2: ( ruleBox )
+                    // InternalRayTracerModel.g:158:3: ruleBox
+                    {
+                     before(grammarAccess.getModelAccess().getElementBoxParserRuleCall_2_0_0()); 
+                    pushFollow(FOLLOW_2);
+                    ruleBox();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getModelAccess().getElementBoxParserRuleCall_2_0_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalRayTracerModel.g:163:2: ( ruleSphere )
+                    {
+                    // InternalRayTracerModel.g:163:2: ( ruleSphere )
+                    // InternalRayTracerModel.g:164:3: ruleSphere
+                    {
+                     before(grammarAccess.getModelAccess().getElementSphereParserRuleCall_2_0_1()); 
+                    pushFollow(FOLLOW_2);
+                    ruleSphere();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getModelAccess().getElementSphereParserRuleCall_2_0_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // InternalRayTracerModel.g:169:2: ( ruleCamera )
+                    {
+                    // InternalRayTracerModel.g:169:2: ( ruleCamera )
+                    // InternalRayTracerModel.g:170:3: ruleCamera
+                    {
+                     before(grammarAccess.getModelAccess().getElementCameraParserRuleCall_2_0_2()); 
+                    pushFollow(FOLLOW_2);
+                    ruleCamera();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getModelAccess().getElementCameraParserRuleCall_2_0_2()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__ElementAlternatives_2_0"
+
+
+    // $ANTLR start "rule__Model__Group__0"
+    // InternalRayTracerModel.g:179:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
+    public final void rule__Model__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:183:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
+            // InternalRayTracerModel.g:184:2: rule__Model__Group__0__Impl rule__Model__Group__1
+            {
+            pushFollow(FOLLOW_3);
+            rule__Model__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Model__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__Group__0"
+
+
+    // $ANTLR start "rule__Model__Group__0__Impl"
+    // InternalRayTracerModel.g:191:1: rule__Model__Group__0__Impl : ( 'model' ) ;
+    public final void rule__Model__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:195:1: ( ( 'model' ) )
+            // InternalRayTracerModel.g:196:1: ( 'model' )
+            {
+            // InternalRayTracerModel.g:196:1: ( 'model' )
+            // InternalRayTracerModel.g:197:2: 'model'
+            {
+             before(grammarAccess.getModelAccess().getModelKeyword_0()); 
+            match(input,11,FOLLOW_2); 
+             after(grammarAccess.getModelAccess().getModelKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Model__Group__1"
+    // InternalRayTracerModel.g:206:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
+    public final void rule__Model__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:210:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
+            // InternalRayTracerModel.g:211:2: rule__Model__Group__1__Impl rule__Model__Group__2
             {
             pushFollow(FOLLOW_4);
-            rule__Greeting__Group__0__Impl();
+            rule__Model__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group__1();
+            rule__Model__Group__2();
 
             state._fsp--;
 
@@ -277,25 +597,35 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__0"
+    // $ANTLR end "rule__Model__Group__1"
 
 
-    // $ANTLR start "rule__Greeting__Group__0__Impl"
-    // InternalRayTracerModel.g:114:1: rule__Greeting__Group__0__Impl : ( 'Hello' ) ;
-    public final void rule__Greeting__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Model__Group__1__Impl"
+    // InternalRayTracerModel.g:218:1: rule__Model__Group__1__Impl : ( ( rule__Model__NameAssignment_1 ) ) ;
+    public final void rule__Model__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRayTracerModel.g:118:1: ( ( 'Hello' ) )
-            // InternalRayTracerModel.g:119:1: ( 'Hello' )
+            // InternalRayTracerModel.g:222:1: ( ( ( rule__Model__NameAssignment_1 ) ) )
+            // InternalRayTracerModel.g:223:1: ( ( rule__Model__NameAssignment_1 ) )
             {
-            // InternalRayTracerModel.g:119:1: ( 'Hello' )
-            // InternalRayTracerModel.g:120:2: 'Hello'
+            // InternalRayTracerModel.g:223:1: ( ( rule__Model__NameAssignment_1 ) )
+            // InternalRayTracerModel.g:224:2: ( rule__Model__NameAssignment_1 )
             {
-             before(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
+             before(grammarAccess.getModelAccess().getNameAssignment_1()); 
+            // InternalRayTracerModel.g:225:2: ( rule__Model__NameAssignment_1 )
+            // InternalRayTracerModel.g:225:3: rule__Model__NameAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Model__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getModelAccess().getNameAssignment_1()); 
 
             }
 
@@ -314,26 +644,124 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__0__Impl"
+    // $ANTLR end "rule__Model__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Greeting__Group__1"
-    // InternalRayTracerModel.g:129:1: rule__Greeting__Group__1 : rule__Greeting__Group__1__Impl rule__Greeting__Group__2 ;
-    public final void rule__Greeting__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__Model__Group__2"
+    // InternalRayTracerModel.g:233:1: rule__Model__Group__2 : rule__Model__Group__2__Impl ;
+    public final void rule__Model__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRayTracerModel.g:133:1: ( rule__Greeting__Group__1__Impl rule__Greeting__Group__2 )
-            // InternalRayTracerModel.g:134:2: rule__Greeting__Group__1__Impl rule__Greeting__Group__2
+            // InternalRayTracerModel.g:237:1: ( rule__Model__Group__2__Impl )
+            // InternalRayTracerModel.g:238:2: rule__Model__Group__2__Impl
             {
-            pushFollow(FOLLOW_5);
-            rule__Greeting__Group__1__Impl();
+            pushFollow(FOLLOW_2);
+            rule__Model__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__Group__2"
+
+
+    // $ANTLR start "rule__Model__Group__2__Impl"
+    // InternalRayTracerModel.g:244:1: rule__Model__Group__2__Impl : ( ( rule__Model__ElementAssignment_2 )* ) ;
+    public final void rule__Model__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:248:1: ( ( ( rule__Model__ElementAssignment_2 )* ) )
+            // InternalRayTracerModel.g:249:1: ( ( rule__Model__ElementAssignment_2 )* )
+            {
+            // InternalRayTracerModel.g:249:1: ( ( rule__Model__ElementAssignment_2 )* )
+            // InternalRayTracerModel.g:250:2: ( rule__Model__ElementAssignment_2 )*
+            {
+             before(grammarAccess.getModelAccess().getElementAssignment_2()); 
+            // InternalRayTracerModel.g:251:2: ( rule__Model__ElementAssignment_2 )*
+            loop2:
+            do {
+                int alt2=2;
+                int LA2_0 = input.LA(1);
+
+                if ( ((LA2_0>=12 && LA2_0<=14)) ) {
+                    alt2=1;
+                }
+
+
+                switch (alt2) {
+            	case 1 :
+            	    // InternalRayTracerModel.g:251:3: rule__Model__ElementAssignment_2
+            	    {
+            	    pushFollow(FOLLOW_5);
+            	    rule__Model__ElementAssignment_2();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop2;
+                }
+            } while (true);
+
+             after(grammarAccess.getModelAccess().getElementAssignment_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__Group__2__Impl"
+
+
+    // $ANTLR start "rule__Box__Group__0"
+    // InternalRayTracerModel.g:260:1: rule__Box__Group__0 : rule__Box__Group__0__Impl rule__Box__Group__1 ;
+    public final void rule__Box__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:264:1: ( rule__Box__Group__0__Impl rule__Box__Group__1 )
+            // InternalRayTracerModel.g:265:2: rule__Box__Group__0__Impl rule__Box__Group__1
+            {
+            pushFollow(FOLLOW_3);
+            rule__Box__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group__2();
+            rule__Box__Group__1();
 
             state._fsp--;
 
@@ -352,105 +780,25 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__1"
+    // $ANTLR end "rule__Box__Group__0"
 
 
-    // $ANTLR start "rule__Greeting__Group__1__Impl"
-    // InternalRayTracerModel.g:141:1: rule__Greeting__Group__1__Impl : ( ( rule__Greeting__NameAssignment_1 ) ) ;
-    public final void rule__Greeting__Group__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRayTracerModel.g:145:1: ( ( ( rule__Greeting__NameAssignment_1 ) ) )
-            // InternalRayTracerModel.g:146:1: ( ( rule__Greeting__NameAssignment_1 ) )
-            {
-            // InternalRayTracerModel.g:146:1: ( ( rule__Greeting__NameAssignment_1 ) )
-            // InternalRayTracerModel.g:147:2: ( rule__Greeting__NameAssignment_1 )
-            {
-             before(grammarAccess.getGreetingAccess().getNameAssignment_1()); 
-            // InternalRayTracerModel.g:148:2: ( rule__Greeting__NameAssignment_1 )
-            // InternalRayTracerModel.g:148:3: rule__Greeting__NameAssignment_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Greeting__NameAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getGreetingAccess().getNameAssignment_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group__1__Impl"
-
-
-    // $ANTLR start "rule__Greeting__Group__2"
-    // InternalRayTracerModel.g:156:1: rule__Greeting__Group__2 : rule__Greeting__Group__2__Impl ;
-    public final void rule__Greeting__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Box__Group__0__Impl"
+    // InternalRayTracerModel.g:272:1: rule__Box__Group__0__Impl : ( 'box' ) ;
+    public final void rule__Box__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRayTracerModel.g:160:1: ( rule__Greeting__Group__2__Impl )
-            // InternalRayTracerModel.g:161:2: rule__Greeting__Group__2__Impl
+            // InternalRayTracerModel.g:276:1: ( ( 'box' ) )
+            // InternalRayTracerModel.g:277:1: ( 'box' )
             {
-            pushFollow(FOLLOW_2);
-            rule__Greeting__Group__2__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group__2"
-
-
-    // $ANTLR start "rule__Greeting__Group__2__Impl"
-    // InternalRayTracerModel.g:167:1: rule__Greeting__Group__2__Impl : ( '!' ) ;
-    public final void rule__Greeting__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalRayTracerModel.g:171:1: ( ( '!' ) )
-            // InternalRayTracerModel.g:172:1: ( '!' )
+            // InternalRayTracerModel.g:277:1: ( 'box' )
+            // InternalRayTracerModel.g:278:2: 'box'
             {
-            // InternalRayTracerModel.g:172:1: ( '!' )
-            // InternalRayTracerModel.g:173:2: '!'
-            {
-             before(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
+             before(grammarAccess.getBoxAccess().getBoxKeyword_0()); 
             match(input,12,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
+             after(grammarAccess.getBoxAccess().getBoxKeyword_0()); 
 
             }
 
@@ -469,32 +817,24 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__2__Impl"
+    // $ANTLR end "rule__Box__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Model__GreetingsAssignment"
-    // InternalRayTracerModel.g:183:1: rule__Model__GreetingsAssignment : ( ruleGreeting ) ;
-    public final void rule__Model__GreetingsAssignment() throws RecognitionException {
+    // $ANTLR start "rule__Box__Group__1"
+    // InternalRayTracerModel.g:287:1: rule__Box__Group__1 : rule__Box__Group__1__Impl ;
+    public final void rule__Box__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRayTracerModel.g:187:1: ( ( ruleGreeting ) )
-            // InternalRayTracerModel.g:188:2: ( ruleGreeting )
+            // InternalRayTracerModel.g:291:1: ( rule__Box__Group__1__Impl )
+            // InternalRayTracerModel.g:292:2: rule__Box__Group__1__Impl
             {
-            // InternalRayTracerModel.g:188:2: ( ruleGreeting )
-            // InternalRayTracerModel.g:189:3: ruleGreeting
-            {
-             before(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
-            ruleGreeting();
+            rule__Box__Group__1__Impl();
 
             state._fsp--;
 
-             after(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
-
-            }
-
 
             }
 
@@ -510,25 +850,35 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__Model__GreetingsAssignment"
+    // $ANTLR end "rule__Box__Group__1"
 
 
-    // $ANTLR start "rule__Greeting__NameAssignment_1"
-    // InternalRayTracerModel.g:198:1: rule__Greeting__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Greeting__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Box__Group__1__Impl"
+    // InternalRayTracerModel.g:298:1: rule__Box__Group__1__Impl : ( ( rule__Box__NameAssignment_1 ) ) ;
+    public final void rule__Box__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalRayTracerModel.g:202:1: ( ( RULE_ID ) )
-            // InternalRayTracerModel.g:203:2: ( RULE_ID )
+            // InternalRayTracerModel.g:302:1: ( ( ( rule__Box__NameAssignment_1 ) ) )
+            // InternalRayTracerModel.g:303:1: ( ( rule__Box__NameAssignment_1 ) )
             {
-            // InternalRayTracerModel.g:203:2: ( RULE_ID )
-            // InternalRayTracerModel.g:204:3: RULE_ID
+            // InternalRayTracerModel.g:303:1: ( ( rule__Box__NameAssignment_1 ) )
+            // InternalRayTracerModel.g:304:2: ( rule__Box__NameAssignment_1 )
             {
-             before(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getBoxAccess().getNameAssignment_1()); 
+            // InternalRayTracerModel.g:305:2: ( rule__Box__NameAssignment_1 )
+            // InternalRayTracerModel.g:305:3: rule__Box__NameAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Box__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBoxAccess().getNameAssignment_1()); 
 
             }
 
@@ -547,7 +897,512 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__NameAssignment_1"
+    // $ANTLR end "rule__Box__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Sphere__Group__0"
+    // InternalRayTracerModel.g:314:1: rule__Sphere__Group__0 : rule__Sphere__Group__0__Impl rule__Sphere__Group__1 ;
+    public final void rule__Sphere__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:318:1: ( rule__Sphere__Group__0__Impl rule__Sphere__Group__1 )
+            // InternalRayTracerModel.g:319:2: rule__Sphere__Group__0__Impl rule__Sphere__Group__1
+            {
+            pushFollow(FOLLOW_3);
+            rule__Sphere__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Sphere__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Sphere__Group__0"
+
+
+    // $ANTLR start "rule__Sphere__Group__0__Impl"
+    // InternalRayTracerModel.g:326:1: rule__Sphere__Group__0__Impl : ( 'sphere' ) ;
+    public final void rule__Sphere__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:330:1: ( ( 'sphere' ) )
+            // InternalRayTracerModel.g:331:1: ( 'sphere' )
+            {
+            // InternalRayTracerModel.g:331:1: ( 'sphere' )
+            // InternalRayTracerModel.g:332:2: 'sphere'
+            {
+             before(grammarAccess.getSphereAccess().getSphereKeyword_0()); 
+            match(input,13,FOLLOW_2); 
+             after(grammarAccess.getSphereAccess().getSphereKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Sphere__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Sphere__Group__1"
+    // InternalRayTracerModel.g:341:1: rule__Sphere__Group__1 : rule__Sphere__Group__1__Impl ;
+    public final void rule__Sphere__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:345:1: ( rule__Sphere__Group__1__Impl )
+            // InternalRayTracerModel.g:346:2: rule__Sphere__Group__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Sphere__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Sphere__Group__1"
+
+
+    // $ANTLR start "rule__Sphere__Group__1__Impl"
+    // InternalRayTracerModel.g:352:1: rule__Sphere__Group__1__Impl : ( ( rule__Sphere__NameAssignment_1 ) ) ;
+    public final void rule__Sphere__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:356:1: ( ( ( rule__Sphere__NameAssignment_1 ) ) )
+            // InternalRayTracerModel.g:357:1: ( ( rule__Sphere__NameAssignment_1 ) )
+            {
+            // InternalRayTracerModel.g:357:1: ( ( rule__Sphere__NameAssignment_1 ) )
+            // InternalRayTracerModel.g:358:2: ( rule__Sphere__NameAssignment_1 )
+            {
+             before(grammarAccess.getSphereAccess().getNameAssignment_1()); 
+            // InternalRayTracerModel.g:359:2: ( rule__Sphere__NameAssignment_1 )
+            // InternalRayTracerModel.g:359:3: rule__Sphere__NameAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Sphere__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getSphereAccess().getNameAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Sphere__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Camera__Group__0"
+    // InternalRayTracerModel.g:368:1: rule__Camera__Group__0 : rule__Camera__Group__0__Impl rule__Camera__Group__1 ;
+    public final void rule__Camera__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:372:1: ( rule__Camera__Group__0__Impl rule__Camera__Group__1 )
+            // InternalRayTracerModel.g:373:2: rule__Camera__Group__0__Impl rule__Camera__Group__1
+            {
+            pushFollow(FOLLOW_3);
+            rule__Camera__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Camera__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Camera__Group__0"
+
+
+    // $ANTLR start "rule__Camera__Group__0__Impl"
+    // InternalRayTracerModel.g:380:1: rule__Camera__Group__0__Impl : ( 'camera' ) ;
+    public final void rule__Camera__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:384:1: ( ( 'camera' ) )
+            // InternalRayTracerModel.g:385:1: ( 'camera' )
+            {
+            // InternalRayTracerModel.g:385:1: ( 'camera' )
+            // InternalRayTracerModel.g:386:2: 'camera'
+            {
+             before(grammarAccess.getCameraAccess().getCameraKeyword_0()); 
+            match(input,14,FOLLOW_2); 
+             after(grammarAccess.getCameraAccess().getCameraKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Camera__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Camera__Group__1"
+    // InternalRayTracerModel.g:395:1: rule__Camera__Group__1 : rule__Camera__Group__1__Impl ;
+    public final void rule__Camera__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:399:1: ( rule__Camera__Group__1__Impl )
+            // InternalRayTracerModel.g:400:2: rule__Camera__Group__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Camera__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Camera__Group__1"
+
+
+    // $ANTLR start "rule__Camera__Group__1__Impl"
+    // InternalRayTracerModel.g:406:1: rule__Camera__Group__1__Impl : ( ( rule__Camera__NameAssignment_1 ) ) ;
+    public final void rule__Camera__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:410:1: ( ( ( rule__Camera__NameAssignment_1 ) ) )
+            // InternalRayTracerModel.g:411:1: ( ( rule__Camera__NameAssignment_1 ) )
+            {
+            // InternalRayTracerModel.g:411:1: ( ( rule__Camera__NameAssignment_1 ) )
+            // InternalRayTracerModel.g:412:2: ( rule__Camera__NameAssignment_1 )
+            {
+             before(grammarAccess.getCameraAccess().getNameAssignment_1()); 
+            // InternalRayTracerModel.g:413:2: ( rule__Camera__NameAssignment_1 )
+            // InternalRayTracerModel.g:413:3: rule__Camera__NameAssignment_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Camera__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getCameraAccess().getNameAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Camera__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Model__NameAssignment_1"
+    // InternalRayTracerModel.g:422:1: rule__Model__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Model__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:426:1: ( ( RULE_ID ) )
+            // InternalRayTracerModel.g:427:2: ( RULE_ID )
+            {
+            // InternalRayTracerModel.g:427:2: ( RULE_ID )
+            // InternalRayTracerModel.g:428:3: RULE_ID
+            {
+             before(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getModelAccess().getNameIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__NameAssignment_1"
+
+
+    // $ANTLR start "rule__Model__ElementAssignment_2"
+    // InternalRayTracerModel.g:437:1: rule__Model__ElementAssignment_2 : ( ( rule__Model__ElementAlternatives_2_0 ) ) ;
+    public final void rule__Model__ElementAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:441:1: ( ( ( rule__Model__ElementAlternatives_2_0 ) ) )
+            // InternalRayTracerModel.g:442:2: ( ( rule__Model__ElementAlternatives_2_0 ) )
+            {
+            // InternalRayTracerModel.g:442:2: ( ( rule__Model__ElementAlternatives_2_0 ) )
+            // InternalRayTracerModel.g:443:3: ( rule__Model__ElementAlternatives_2_0 )
+            {
+             before(grammarAccess.getModelAccess().getElementAlternatives_2_0()); 
+            // InternalRayTracerModel.g:444:3: ( rule__Model__ElementAlternatives_2_0 )
+            // InternalRayTracerModel.g:444:4: rule__Model__ElementAlternatives_2_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Model__ElementAlternatives_2_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getModelAccess().getElementAlternatives_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__ElementAssignment_2"
+
+
+    // $ANTLR start "rule__Box__NameAssignment_1"
+    // InternalRayTracerModel.g:452:1: rule__Box__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Box__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:456:1: ( ( RULE_ID ) )
+            // InternalRayTracerModel.g:457:2: ( RULE_ID )
+            {
+            // InternalRayTracerModel.g:457:2: ( RULE_ID )
+            // InternalRayTracerModel.g:458:3: RULE_ID
+            {
+             before(grammarAccess.getBoxAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getBoxAccess().getNameIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Box__NameAssignment_1"
+
+
+    // $ANTLR start "rule__Sphere__NameAssignment_1"
+    // InternalRayTracerModel.g:467:1: rule__Sphere__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Sphere__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:471:1: ( ( RULE_ID ) )
+            // InternalRayTracerModel.g:472:2: ( RULE_ID )
+            {
+            // InternalRayTracerModel.g:472:2: ( RULE_ID )
+            // InternalRayTracerModel.g:473:3: RULE_ID
+            {
+             before(grammarAccess.getSphereAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getSphereAccess().getNameIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Sphere__NameAssignment_1"
+
+
+    // $ANTLR start "rule__Camera__NameAssignment_1"
+    // InternalRayTracerModel.g:482:1: rule__Camera__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Camera__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalRayTracerModel.g:486:1: ( ( RULE_ID ) )
+            // InternalRayTracerModel.g:487:2: ( RULE_ID )
+            {
+            // InternalRayTracerModel.g:487:2: ( RULE_ID )
+            // InternalRayTracerModel.g:488:3: RULE_ID
+            {
+             before(grammarAccess.getCameraAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getCameraAccess().getNameIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Camera__NameAssignment_1"
 
     // Delegated rules
 
@@ -556,8 +1411,8 @@ public class InternalRayTracerModelParser extends AbstractInternalContentAssistP
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000007000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000007002L});
 
 }

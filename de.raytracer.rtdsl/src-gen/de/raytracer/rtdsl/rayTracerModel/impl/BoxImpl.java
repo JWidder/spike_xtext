@@ -3,41 +3,30 @@
  */
 package de.raytracer.rtdsl.rayTracerModel.impl;
 
-import de.raytracer.rtdsl.rayTracerModel.Model;
+import de.raytracer.rtdsl.rayTracerModel.Box;
 import de.raytracer.rtdsl.rayTracerModel.RayTracerModelPackage;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Box</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.raytracer.rtdsl.rayTracerModel.impl.ModelImpl#getName <em>Name</em>}</li>
- *   <li>{@link de.raytracer.rtdsl.rayTracerModel.impl.ModelImpl#getElement <em>Element</em>}</li>
+ *   <li>{@link de.raytracer.rtdsl.rayTracerModel.impl.BoxImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+public class BoxImpl extends MinimalEObjectImpl.Container implements Box
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -60,21 +49,11 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getElement()
-   * @generated
-   * @ordered
-   */
-  protected EList<EObject> element;
-
-  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModelImpl()
+  protected BoxImpl()
   {
     super();
   }
@@ -87,7 +66,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return RayTracerModelPackage.Literals.MODEL;
+    return RayTracerModelPackage.Literals.BOX;
   }
 
   /**
@@ -112,38 +91,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RayTracerModelPackage.MODEL__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<EObject> getElement()
-  {
-    if (element == null)
-    {
-      element = new EObjectContainmentEList<EObject>(EObject.class, this, RayTracerModelPackage.MODEL__ELEMENT);
-    }
-    return element;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case RayTracerModelPackage.MODEL__ELEMENT:
-        return ((InternalEList<?>)getElement()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+      eNotify(new ENotificationImpl(this, Notification.SET, RayTracerModelPackage.BOX__NAME, oldName, name));
   }
 
   /**
@@ -156,10 +104,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case RayTracerModelPackage.MODEL__NAME:
+      case RayTracerModelPackage.BOX__NAME:
         return getName();
-      case RayTracerModelPackage.MODEL__ELEMENT:
-        return getElement();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -169,18 +115,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case RayTracerModelPackage.MODEL__NAME:
+      case RayTracerModelPackage.BOX__NAME:
         setName((String)newValue);
-        return;
-      case RayTracerModelPackage.MODEL__ELEMENT:
-        getElement().clear();
-        getElement().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -196,11 +137,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case RayTracerModelPackage.MODEL__NAME:
+      case RayTracerModelPackage.BOX__NAME:
         setName(NAME_EDEFAULT);
-        return;
-      case RayTracerModelPackage.MODEL__ELEMENT:
-        getElement().clear();
         return;
     }
     super.eUnset(featureID);
@@ -216,10 +154,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case RayTracerModelPackage.MODEL__NAME:
+      case RayTracerModelPackage.BOX__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case RayTracerModelPackage.MODEL__ELEMENT:
-        return element != null && !element.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -241,4 +177,4 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     return result.toString();
   }
 
-} //ModelImpl
+} //BoxImpl

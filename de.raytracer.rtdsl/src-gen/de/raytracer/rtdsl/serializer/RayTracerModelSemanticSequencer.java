@@ -4,9 +4,11 @@
 package de.raytracer.rtdsl.serializer;
 
 import com.google.inject.Inject;
-import de.raytracer.rtdsl.rayTracerModel.Greeting;
+import de.raytracer.rtdsl.rayTracerModel.Box;
+import de.raytracer.rtdsl.rayTracerModel.Camera;
 import de.raytracer.rtdsl.rayTracerModel.Model;
 import de.raytracer.rtdsl.rayTracerModel.RayTracerModelPackage;
+import de.raytracer.rtdsl.rayTracerModel.Sphere;
 import de.raytracer.rtdsl.services.RayTracerModelGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -33,11 +35,17 @@ public class RayTracerModelSemanticSequencer extends AbstractDelegatingSemanticS
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == RayTracerModelPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case RayTracerModelPackage.GREETING:
-				sequence_Greeting(context, (Greeting) semanticObject); 
+			case RayTracerModelPackage.BOX:
+				sequence_Box(context, (Box) semanticObject); 
+				return; 
+			case RayTracerModelPackage.CAMERA:
+				sequence_Camera(context, (Camera) semanticObject); 
 				return; 
 			case RayTracerModelPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
+				return; 
+			case RayTracerModelPackage.SPHERE:
+				sequence_Sphere(context, (Sphere) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -46,18 +54,36 @@ public class RayTracerModelSemanticSequencer extends AbstractDelegatingSemanticS
 	
 	/**
 	 * Contexts:
-	 *     Greeting returns Greeting
+	 *     Box returns Box
 	 *
 	 * Constraint:
 	 *     name=ID
 	 */
-	protected void sequence_Greeting(ISerializationContext context, Greeting semanticObject) {
+	protected void sequence_Box(ISerializationContext context, Box semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, RayTracerModelPackage.Literals.GREETING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RayTracerModelPackage.Literals.GREETING__NAME));
+			if (transientValues.isValueTransient(semanticObject, RayTracerModelPackage.Literals.BOX__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RayTracerModelPackage.Literals.BOX__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getBoxAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Camera returns Camera
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_Camera(ISerializationContext context, Camera semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, RayTracerModelPackage.Literals.CAMERA__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RayTracerModelPackage.Literals.CAMERA__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getCameraAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -67,10 +93,28 @@ public class RayTracerModelSemanticSequencer extends AbstractDelegatingSemanticS
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     greetings+=Greeting+
+	 *     (name=ID (element+=Box | element+=Sphere | element+=Camera)*)
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Sphere returns Sphere
+	 *
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_Sphere(ISerializationContext context, Sphere semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, RayTracerModelPackage.Literals.SPHERE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, RayTracerModelPackage.Literals.SPHERE__NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getSphereAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	

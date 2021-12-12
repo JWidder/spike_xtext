@@ -21,7 +21,7 @@ class RayTracerModelParsingTest {
 	@Test
 	def void loadModel() {
 		val result = parseHelper.parse('''
-			Hello Xtext!
+			model test box test1
 		''')
 		Assertions.assertNotNull(result)
 		val errors = result.eResource.errors

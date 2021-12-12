@@ -3,10 +3,12 @@
  */
 package de.raytracer.rtdsl.rayTracerModel.impl;
 
-import de.raytracer.rtdsl.rayTracerModel.Greeting;
+import de.raytracer.rtdsl.rayTracerModel.Box;
+import de.raytracer.rtdsl.rayTracerModel.Camera;
 import de.raytracer.rtdsl.rayTracerModel.Model;
 import de.raytracer.rtdsl.rayTracerModel.RayTracerModelFactory;
 import de.raytracer.rtdsl.rayTracerModel.RayTracerModelPackage;
+import de.raytracer.rtdsl.rayTracerModel.Sphere;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -35,7 +37,21 @@ public class RayTracerModelPackageImpl extends EPackageImpl implements RayTracer
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass greetingEClass = null;
+  private EClass boxEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass sphereEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass cameraEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -117,9 +133,9 @@ public class RayTracerModelPackageImpl extends EPackageImpl implements RayTracer
    * @generated
    */
   @Override
-  public EReference getModel_Greetings()
+  public EAttribute getModel_Name()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)modelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -128,9 +144,9 @@ public class RayTracerModelPackageImpl extends EPackageImpl implements RayTracer
    * @generated
    */
   @Override
-  public EClass getGreeting()
+  public EReference getModel_Element()
   {
-    return greetingEClass;
+    return (EReference)modelEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -139,9 +155,64 @@ public class RayTracerModelPackageImpl extends EPackageImpl implements RayTracer
    * @generated
    */
   @Override
-  public EAttribute getGreeting_Name()
+  public EClass getBox()
   {
-    return (EAttribute)greetingEClass.getEStructuralFeatures().get(0);
+    return boxEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getBox_Name()
+  {
+    return (EAttribute)boxEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getSphere()
+  {
+    return sphereEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSphere_Name()
+  {
+    return (EAttribute)sphereEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getCamera()
+  {
+    return cameraEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCamera_Name()
+  {
+    return (EAttribute)cameraEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -176,10 +247,17 @@ public class RayTracerModelPackageImpl extends EPackageImpl implements RayTracer
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__GREETINGS);
+    createEAttribute(modelEClass, MODEL__NAME);
+    createEReference(modelEClass, MODEL__ELEMENT);
 
-    greetingEClass = createEClass(GREETING);
-    createEAttribute(greetingEClass, GREETING__NAME);
+    boxEClass = createEClass(BOX);
+    createEAttribute(boxEClass, BOX__NAME);
+
+    sphereEClass = createEClass(SPHERE);
+    createEAttribute(sphereEClass, SPHERE__NAME);
+
+    cameraEClass = createEClass(CAMERA);
+    createEAttribute(cameraEClass, CAMERA__NAME);
   }
 
   /**
@@ -214,10 +292,17 @@ public class RayTracerModelPackageImpl extends EPackageImpl implements RayTracer
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Greetings(), this.getGreeting(), null, "greetings", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Element(), ecorePackage.getEObject(), null, "element", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(boxEClass, Box.class, "Box", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBox_Name(), ecorePackage.getEString(), "name", null, 0, 1, Box.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(sphereEClass, Sphere.class, "Sphere", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSphere_Name(), ecorePackage.getEString(), "name", null, 0, 1, Sphere.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(cameraEClass, Camera.class, "Camera", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCamera_Name(), ecorePackage.getEString(), "name", null, 0, 1, Camera.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

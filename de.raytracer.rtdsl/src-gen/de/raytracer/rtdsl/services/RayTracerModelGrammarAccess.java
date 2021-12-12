@@ -6,6 +6,7 @@ package de.raytracer.rtdsl.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
+import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
@@ -23,36 +24,28 @@ public class RayTracerModelGrammarAccess extends AbstractElementFinder.AbstractG
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.raytracer.rtdsl.RayTracerModel.Model");
-		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cGreetingsGreetingParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
-		
-		//Model:
-		//    greetings+=Greeting*;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//greetings+=Greeting*
-		public Assignment getGreetingsAssignment() { return cGreetingsAssignment; }
-		
-		//Greeting
-		public RuleCall getGreetingsGreetingParserRuleCall_0() { return cGreetingsGreetingParserRuleCall_0; }
-	}
-	public class GreetingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.raytracer.rtdsl.RayTracerModel.Greeting");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cHelloKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cModelKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cExclamationMarkKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cElementAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cElementAlternatives_2_0 = (Alternatives)cElementAssignment_2.eContents().get(0);
+		private final RuleCall cElementBoxParserRuleCall_2_0_0 = (RuleCall)cElementAlternatives_2_0.eContents().get(0);
+		private final RuleCall cElementSphereParserRuleCall_2_0_1 = (RuleCall)cElementAlternatives_2_0.eContents().get(1);
+		private final RuleCall cElementCameraParserRuleCall_2_0_2 = (RuleCall)cElementAlternatives_2_0.eContents().get(2);
 		
-		//Greeting:
-		//    'Hello' name=ID '!';
+		//Model:
+		//    'model' name=ID
+		//    element += (Box|Sphere|Camera)*
+		//    ;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Hello' name=ID '!'
+		//'model' name=ID
+		//element += (Box|Sphere|Camera)*
 		public Group getGroup() { return cGroup; }
 		
-		//'Hello'
-		public Keyword getHelloKeyword_0() { return cHelloKeyword_0; }
+		//'model'
+		public Keyword getModelKeyword_0() { return cModelKeyword_0; }
 		
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -60,13 +53,99 @@ public class RayTracerModelGrammarAccess extends AbstractElementFinder.AbstractG
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
-		//'!'
-		public Keyword getExclamationMarkKeyword_2() { return cExclamationMarkKeyword_2; }
+		//element += (Box|Sphere|Camera)*
+		public Assignment getElementAssignment_2() { return cElementAssignment_2; }
+		
+		//(Box|Sphere|Camera)
+		public Alternatives getElementAlternatives_2_0() { return cElementAlternatives_2_0; }
+		
+		//Box
+		public RuleCall getElementBoxParserRuleCall_2_0_0() { return cElementBoxParserRuleCall_2_0_0; }
+		
+		//Sphere
+		public RuleCall getElementSphereParserRuleCall_2_0_1() { return cElementSphereParserRuleCall_2_0_1; }
+		
+		//Camera
+		public RuleCall getElementCameraParserRuleCall_2_0_2() { return cElementCameraParserRuleCall_2_0_2; }
+	}
+	public class BoxElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.raytracer.rtdsl.RayTracerModel.Box");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cBoxKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		
+		//Box:
+		//    'box' name=ID
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'box' name=ID
+		public Group getGroup() { return cGroup; }
+		
+		//'box'
+		public Keyword getBoxKeyword_0() { return cBoxKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+	}
+	public class SphereElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.raytracer.rtdsl.RayTracerModel.Sphere");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSphereKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		
+		//Sphere:
+		//    'sphere' name=ID
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'sphere' name=ID
+		public Group getGroup() { return cGroup; }
+		
+		//'sphere'
+		public Keyword getSphereKeyword_0() { return cSphereKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+	}
+	public class CameraElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "de.raytracer.rtdsl.RayTracerModel.Camera");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cCameraKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		
+		//Camera:
+		//    'camera' name=ID
+		//;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'camera' name=ID
+		public Group getGroup() { return cGroup; }
+		
+		//'camera'
+		public Keyword getCameraKeyword_0() { return cCameraKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 	}
 	
 	
 	private final ModelElements pModel;
-	private final GreetingElements pGreeting;
+	private final BoxElements pBox;
+	private final SphereElements pSphere;
+	private final CameraElements pCamera;
 	
 	private final Grammar grammar;
 	
@@ -78,7 +157,9 @@ public class RayTracerModelGrammarAccess extends AbstractElementFinder.AbstractG
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
-		this.pGreeting = new GreetingElements();
+		this.pBox = new BoxElements();
+		this.pSphere = new SphereElements();
+		this.pCamera = new CameraElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -109,7 +190,9 @@ public class RayTracerModelGrammarAccess extends AbstractElementFinder.AbstractG
 
 	
 	//Model:
-	//    greetings+=Greeting*;
+	//    'model' name=ID
+	//    element += (Box|Sphere|Camera)*
+	//    ;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -118,14 +201,37 @@ public class RayTracerModelGrammarAccess extends AbstractElementFinder.AbstractG
 		return getModelAccess().getRule();
 	}
 	
-	//Greeting:
-	//    'Hello' name=ID '!';
-	public GreetingElements getGreetingAccess() {
-		return pGreeting;
+	//Box:
+	//    'box' name=ID
+	//;
+	public BoxElements getBoxAccess() {
+		return pBox;
 	}
 	
-	public ParserRule getGreetingRule() {
-		return getGreetingAccess().getRule();
+	public ParserRule getBoxRule() {
+		return getBoxAccess().getRule();
+	}
+	
+	//Sphere:
+	//    'sphere' name=ID
+	//;
+	public SphereElements getSphereAccess() {
+		return pSphere;
+	}
+	
+	public ParserRule getSphereRule() {
+		return getSphereAccess().getRule();
+	}
+	
+	//Camera:
+	//    'camera' name=ID
+	//;
+	public CameraElements getCameraAccess() {
+		return pCamera;
+	}
+	
+	public ParserRule getCameraRule() {
+		return getCameraAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

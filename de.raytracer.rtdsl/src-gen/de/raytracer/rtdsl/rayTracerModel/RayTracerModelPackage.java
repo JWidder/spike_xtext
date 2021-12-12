@@ -68,13 +68,22 @@ public interface RayTracerModelPackage extends EPackage
   int MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Greetings</b></em>' containment reference list.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__GREETINGS = 0;
+  int MODEL__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Element</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__ELEMENT = 1;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -83,17 +92,17 @@ public interface RayTracerModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 1;
+  int MODEL_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link de.raytracer.rtdsl.rayTracerModel.impl.GreetingImpl <em>Greeting</em>}' class.
+   * The meta object id for the '{@link de.raytracer.rtdsl.rayTracerModel.impl.BoxImpl <em>Box</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.raytracer.rtdsl.rayTracerModel.impl.GreetingImpl
-   * @see de.raytracer.rtdsl.rayTracerModel.impl.RayTracerModelPackageImpl#getGreeting()
+   * @see de.raytracer.rtdsl.rayTracerModel.impl.BoxImpl
+   * @see de.raytracer.rtdsl.rayTracerModel.impl.RayTracerModelPackageImpl#getBox()
    * @generated
    */
-  int GREETING = 1;
+  int BOX = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -102,16 +111,72 @@ public interface RayTracerModelPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GREETING__NAME = 0;
+  int BOX__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Greeting</em>' class.
+   * The number of structural features of the '<em>Box</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING_FEATURE_COUNT = 1;
+  int BOX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link de.raytracer.rtdsl.rayTracerModel.impl.SphereImpl <em>Sphere</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.raytracer.rtdsl.rayTracerModel.impl.SphereImpl
+   * @see de.raytracer.rtdsl.rayTracerModel.impl.RayTracerModelPackageImpl#getSphere()
+   * @generated
+   */
+  int SPHERE = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPHERE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Sphere</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPHERE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link de.raytracer.rtdsl.rayTracerModel.impl.CameraImpl <em>Camera</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see de.raytracer.rtdsl.rayTracerModel.impl.CameraImpl
+   * @see de.raytracer.rtdsl.rayTracerModel.impl.RayTracerModelPackageImpl#getCamera()
+   * @generated
+   */
+  int CAMERA = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAMERA__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Camera</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CAMERA_FEATURE_COUNT = 1;
 
 
   /**
@@ -125,36 +190,89 @@ public interface RayTracerModelPackage extends EPackage
   EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link de.raytracer.rtdsl.rayTracerModel.Model#getGreetings <em>Greetings</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Greetings</em>'.
-   * @see de.raytracer.rtdsl.rayTracerModel.Model#getGreetings()
-   * @see #getModel()
-   * @generated
-   */
-  EReference getModel_Greetings();
-
-  /**
-   * Returns the meta object for class '{@link de.raytracer.rtdsl.rayTracerModel.Greeting <em>Greeting</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Greeting</em>'.
-   * @see de.raytracer.rtdsl.rayTracerModel.Greeting
-   * @generated
-   */
-  EClass getGreeting();
-
-  /**
-   * Returns the meta object for the attribute '{@link de.raytracer.rtdsl.rayTracerModel.Greeting#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link de.raytracer.rtdsl.rayTracerModel.Model#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see de.raytracer.rtdsl.rayTracerModel.Greeting#getName()
-   * @see #getGreeting()
+   * @see de.raytracer.rtdsl.rayTracerModel.Model#getName()
+   * @see #getModel()
    * @generated
    */
-  EAttribute getGreeting_Name();
+  EAttribute getModel_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link de.raytracer.rtdsl.rayTracerModel.Model#getElement <em>Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Element</em>'.
+   * @see de.raytracer.rtdsl.rayTracerModel.Model#getElement()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Element();
+
+  /**
+   * Returns the meta object for class '{@link de.raytracer.rtdsl.rayTracerModel.Box <em>Box</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Box</em>'.
+   * @see de.raytracer.rtdsl.rayTracerModel.Box
+   * @generated
+   */
+  EClass getBox();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.raytracer.rtdsl.rayTracerModel.Box#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.raytracer.rtdsl.rayTracerModel.Box#getName()
+   * @see #getBox()
+   * @generated
+   */
+  EAttribute getBox_Name();
+
+  /**
+   * Returns the meta object for class '{@link de.raytracer.rtdsl.rayTracerModel.Sphere <em>Sphere</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sphere</em>'.
+   * @see de.raytracer.rtdsl.rayTracerModel.Sphere
+   * @generated
+   */
+  EClass getSphere();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.raytracer.rtdsl.rayTracerModel.Sphere#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.raytracer.rtdsl.rayTracerModel.Sphere#getName()
+   * @see #getSphere()
+   * @generated
+   */
+  EAttribute getSphere_Name();
+
+  /**
+   * Returns the meta object for class '{@link de.raytracer.rtdsl.rayTracerModel.Camera <em>Camera</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Camera</em>'.
+   * @see de.raytracer.rtdsl.rayTracerModel.Camera
+   * @generated
+   */
+  EClass getCamera();
+
+  /**
+   * Returns the meta object for the attribute '{@link de.raytracer.rtdsl.rayTracerModel.Camera#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see de.raytracer.rtdsl.rayTracerModel.Camera#getName()
+   * @see #getCamera()
+   * @generated
+   */
+  EAttribute getCamera_Name();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -190,22 +308,30 @@ public interface RayTracerModelPackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
-     * The meta object literal for the '<em><b>Greetings</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
+    EAttribute MODEL__NAME = eINSTANCE.getModel_Name();
 
     /**
-     * The meta object literal for the '{@link de.raytracer.rtdsl.rayTracerModel.impl.GreetingImpl <em>Greeting</em>}' class.
+     * The meta object literal for the '<em><b>Element</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.raytracer.rtdsl.rayTracerModel.impl.GreetingImpl
-     * @see de.raytracer.rtdsl.rayTracerModel.impl.RayTracerModelPackageImpl#getGreeting()
      * @generated
      */
-    EClass GREETING = eINSTANCE.getGreeting();
+    EReference MODEL__ELEMENT = eINSTANCE.getModel_Element();
+
+    /**
+     * The meta object literal for the '{@link de.raytracer.rtdsl.rayTracerModel.impl.BoxImpl <em>Box</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.raytracer.rtdsl.rayTracerModel.impl.BoxImpl
+     * @see de.raytracer.rtdsl.rayTracerModel.impl.RayTracerModelPackageImpl#getBox()
+     * @generated
+     */
+    EClass BOX = eINSTANCE.getBox();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -213,7 +339,43 @@ public interface RayTracerModelPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+    EAttribute BOX__NAME = eINSTANCE.getBox_Name();
+
+    /**
+     * The meta object literal for the '{@link de.raytracer.rtdsl.rayTracerModel.impl.SphereImpl <em>Sphere</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.raytracer.rtdsl.rayTracerModel.impl.SphereImpl
+     * @see de.raytracer.rtdsl.rayTracerModel.impl.RayTracerModelPackageImpl#getSphere()
+     * @generated
+     */
+    EClass SPHERE = eINSTANCE.getSphere();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPHERE__NAME = eINSTANCE.getSphere_Name();
+
+    /**
+     * The meta object literal for the '{@link de.raytracer.rtdsl.rayTracerModel.impl.CameraImpl <em>Camera</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see de.raytracer.rtdsl.rayTracerModel.impl.CameraImpl
+     * @see de.raytracer.rtdsl.rayTracerModel.impl.RayTracerModelPackageImpl#getCamera()
+     * @generated
+     */
+    EClass CAMERA = eINSTANCE.getCamera();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CAMERA__NAME = eINSTANCE.getCamera_Name();
 
   }
 

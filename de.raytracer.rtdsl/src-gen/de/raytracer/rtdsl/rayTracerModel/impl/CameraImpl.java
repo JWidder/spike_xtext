@@ -3,7 +3,7 @@
  */
 package de.raytracer.rtdsl.rayTracerModel.impl;
 
-import de.raytracer.rtdsl.rayTracerModel.Greeting;
+import de.raytracer.rtdsl.rayTracerModel.Camera;
 import de.raytracer.rtdsl.rayTracerModel.RayTracerModelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -15,18 +15,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Greeting</b></em>'.
+ * An implementation of the model object '<em><b>Camera</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link de.raytracer.rtdsl.rayTracerModel.impl.GreetingImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.raytracer.rtdsl.rayTracerModel.impl.CameraImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeting
+public class CameraImpl extends MinimalEObjectImpl.Container implements Camera
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -53,7 +53,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GreetingImpl()
+  protected CameraImpl()
   {
     super();
   }
@@ -66,7 +66,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   @Override
   protected EClass eStaticClass()
   {
-    return RayTracerModelPackage.Literals.GREETING;
+    return RayTracerModelPackage.Literals.CAMERA;
   }
 
   /**
@@ -91,7 +91,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, RayTracerModelPackage.GREETING__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, RayTracerModelPackage.CAMERA__NAME, oldName, name));
   }
 
   /**
@@ -104,7 +104,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case RayTracerModelPackage.GREETING__NAME:
+      case RayTracerModelPackage.CAMERA__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -120,7 +120,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case RayTracerModelPackage.GREETING__NAME:
+      case RayTracerModelPackage.CAMERA__NAME:
         setName((String)newValue);
         return;
     }
@@ -137,7 +137,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case RayTracerModelPackage.GREETING__NAME:
+      case RayTracerModelPackage.CAMERA__NAME:
         setName(NAME_EDEFAULT);
         return;
     }
@@ -154,7 +154,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case RayTracerModelPackage.GREETING__NAME:
+      case RayTracerModelPackage.CAMERA__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
@@ -177,4 +177,4 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     return result.toString();
   }
 
-} //GreetingImpl
+} //CameraImpl

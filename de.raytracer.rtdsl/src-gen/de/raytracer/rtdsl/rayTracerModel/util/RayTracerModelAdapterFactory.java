@@ -81,9 +81,19 @@ public class RayTracerModelAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseGreeting(Greeting object)
+      public Adapter caseBox(Box object)
       {
-        return createGreetingAdapter();
+        return createBoxAdapter();
+      }
+      @Override
+      public Adapter caseSphere(Sphere object)
+      {
+        return createSphereAdapter();
+      }
+      @Override
+      public Adapter caseCamera(Camera object)
+      {
+        return createCameraAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -123,16 +133,46 @@ public class RayTracerModelAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link de.raytracer.rtdsl.rayTracerModel.Greeting <em>Greeting</em>}'.
+   * Creates a new adapter for an object of class '{@link de.raytracer.rtdsl.rayTracerModel.Box <em>Box</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.raytracer.rtdsl.rayTracerModel.Greeting
+   * @see de.raytracer.rtdsl.rayTracerModel.Box
    * @generated
    */
-  public Adapter createGreetingAdapter()
+  public Adapter createBoxAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.raytracer.rtdsl.rayTracerModel.Sphere <em>Sphere</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.raytracer.rtdsl.rayTracerModel.Sphere
+   * @generated
+   */
+  public Adapter createSphereAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.raytracer.rtdsl.rayTracerModel.Camera <em>Camera</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.raytracer.rtdsl.rayTracerModel.Camera
+   * @generated
+   */
+  public Adapter createCameraAdapter()
   {
     return null;
   }

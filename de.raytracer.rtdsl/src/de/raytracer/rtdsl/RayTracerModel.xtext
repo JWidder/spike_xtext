@@ -3,7 +3,18 @@ grammar de.raytracer.rtdsl.RayTracerModel with org.eclipse.xtext.common.Terminal
 generate rayTracerModel "http://www.raytracer.de/rtdsl/RayTracerModel"
 
 Model:
-	greetings+=Greeting*;
+	'model' name=ID
+	element += (Box|Sphere|Camera)*
+	;
 	
-Greeting:
-	'Hello' name=ID '!';
+Box:
+	'box' name=ID
+;
+
+Sphere:
+	'sphere' name=ID
+;
+
+Camera:
+	'camera' name=ID
+;

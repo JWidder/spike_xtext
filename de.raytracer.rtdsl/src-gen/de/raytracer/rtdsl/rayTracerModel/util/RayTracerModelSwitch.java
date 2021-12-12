@@ -80,10 +80,24 @@ public class RayTracerModelSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case RayTracerModelPackage.GREETING:
+      case RayTracerModelPackage.BOX:
       {
-        Greeting greeting = (Greeting)theEObject;
-        T result = caseGreeting(greeting);
+        Box box = (Box)theEObject;
+        T result = caseBox(box);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RayTracerModelPackage.SPHERE:
+      {
+        Sphere sphere = (Sphere)theEObject;
+        T result = caseSphere(sphere);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RayTracerModelPackage.CAMERA:
+      {
+        Camera camera = (Camera)theEObject;
+        T result = caseCamera(camera);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -108,17 +122,49 @@ public class RayTracerModelSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Greeting</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Box</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Greeting</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Box</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGreeting(Greeting object)
+  public T caseBox(Box object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sphere</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sphere</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSphere(Sphere object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Camera</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Camera</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCamera(Camera object)
   {
     return null;
   }

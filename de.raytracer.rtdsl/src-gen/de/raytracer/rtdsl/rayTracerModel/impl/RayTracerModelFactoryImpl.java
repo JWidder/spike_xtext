@@ -66,7 +66,9 @@ public class RayTracerModelFactoryImpl extends EFactoryImpl implements RayTracer
     switch (eClass.getClassifierID())
     {
       case RayTracerModelPackage.MODEL: return createModel();
-      case RayTracerModelPackage.GREETING: return createGreeting();
+      case RayTracerModelPackage.BOX: return createBox();
+      case RayTracerModelPackage.SPHERE: return createSphere();
+      case RayTracerModelPackage.CAMERA: return createCamera();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -90,10 +92,34 @@ public class RayTracerModelFactoryImpl extends EFactoryImpl implements RayTracer
    * @generated
    */
   @Override
-  public Greeting createGreeting()
+  public Box createBox()
   {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    BoxImpl box = new BoxImpl();
+    return box;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Sphere createSphere()
+  {
+    SphereImpl sphere = new SphereImpl();
+    return sphere;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Camera createCamera()
+  {
+    CameraImpl camera = new CameraImpl();
+    return camera;
   }
 
   /**

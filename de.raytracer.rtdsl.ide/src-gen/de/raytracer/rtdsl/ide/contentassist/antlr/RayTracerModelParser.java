@@ -31,9 +31,16 @@ public class RayTracerModelParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, RayTracerModelGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getGreetingAccess().getGroup(), "rule__Greeting__Group__0");
-			builder.put(grammarAccess.getModelAccess().getGreetingsAssignment(), "rule__Model__GreetingsAssignment");
-			builder.put(grammarAccess.getGreetingAccess().getNameAssignment_1(), "rule__Greeting__NameAssignment_1");
+			builder.put(grammarAccess.getModelAccess().getElementAlternatives_2_0(), "rule__Model__ElementAlternatives_2_0");
+			builder.put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
+			builder.put(grammarAccess.getBoxAccess().getGroup(), "rule__Box__Group__0");
+			builder.put(grammarAccess.getSphereAccess().getGroup(), "rule__Sphere__Group__0");
+			builder.put(grammarAccess.getCameraAccess().getGroup(), "rule__Camera__Group__0");
+			builder.put(grammarAccess.getModelAccess().getNameAssignment_1(), "rule__Model__NameAssignment_1");
+			builder.put(grammarAccess.getModelAccess().getElementAssignment_2(), "rule__Model__ElementAssignment_2");
+			builder.put(grammarAccess.getBoxAccess().getNameAssignment_1(), "rule__Box__NameAssignment_1");
+			builder.put(grammarAccess.getSphereAccess().getNameAssignment_1(), "rule__Sphere__NameAssignment_1");
+			builder.put(grammarAccess.getCameraAccess().getNameAssignment_1(), "rule__Camera__NameAssignment_1");
 		}
 	}
 	
