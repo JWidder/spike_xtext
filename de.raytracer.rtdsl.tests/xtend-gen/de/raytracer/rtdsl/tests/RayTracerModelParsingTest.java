@@ -28,7 +28,7 @@ public class RayTracerModelParsingTest {
   public void loadModel() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("model test box test1");
+      _builder.append("model test box test2");
       _builder.newLine();
       final Model result = this.parseHelper.parse(_builder);
       Assertions.assertNotNull(result);
@@ -68,7 +68,7 @@ public class RayTracerModelParsingTest {
   public void loadModel2() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("model test box test1 sphere ");
+      _builder.append("model test box test1 sphere TEST2");
       _builder.newLine();
       final Model result = this.parseHelper.parse(_builder);
       Assertions.assertNotNull(result);

@@ -21,7 +21,7 @@ class RayTracerModelParsingTest {
 	@Test
 	def void loadModel() {
 		val result = parseHelper.parse('''
-			model test box test1
+			model test box test2
 		''')
 		Assertions.assertNotNull(result)
 		val errors = result.eResource.errors
@@ -41,7 +41,7 @@ class RayTracerModelParsingTest {
 	@Test
 	def void loadModel2() {
 		val result = parseHelper.parse('''
-			model test box test1 sphere 
+			model test box test1 sphere TEST2
 		''')
 		Assertions.assertNotNull(result)
 		val errors = result.eResource.errors
